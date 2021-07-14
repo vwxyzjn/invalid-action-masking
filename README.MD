@@ -1,6 +1,6 @@
 # A Closer Look at Invalid Action Masking in Policy Gradient Algorithms
 
-This repo contains the source code to reproduce the results in the paper *A Closer Look at Invalid Action Masking in Policy Gradient Algorithms*. 
+This repo contains the source code to reproduce the results in the paper [*A Closer Look at Invalid Action Masking in Policy Gradient Algorithms*](https://arxiv.org/abs/2006.14171). 
 
 ## Get started
 
@@ -25,13 +25,6 @@ python invalid_action_masking/ppo_10x10.py
 python invalid_action_masking/ppo_no_adj_10x10.py
 python invalid_action_masking/ppo_no_mask_10x10.py
 ```
-
-
-# Reproduction without WANDB
-
-Although it would be possible, it would require a significant amount of effort to properly log 
-metrics and redo the plotting, so at this time we would not have intructions to do reproduction
-without WANDB. Note that it is possible to use wandb locally by following https://docs.wandb.com/self-hosted/local.
 
 # If you have an issue reproducing the results
 
