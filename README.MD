@@ -2,34 +2,28 @@
 
 This repo contains the source code to reproduce the results in the paper *A Closer Look at Invalid Action Masking in Policy Gradient Algorithms*. 
 
-# Steps to reproduce the experiments
+## Get started
+```
+# if you have pyenv or poetry:
+pyenv install -s $(sed "s/\/envs.*//" .python-version)
+pyenv virtualenv $(sed "s/\/envs\// /" .python-version)
+poetry install
+# else:
+# pip install -r requirements.txt
 
-Our experiments use docker containers to run and Weight and Biases (https://www.wandb.com/) to record the experiments, so the first step is to register a wandb account and get an API key, which we refer to as `YOUR_WANDB_KEY`
-
-```bash
-# build the docker container
-docker build -t invalid_action_masking:latest -f sharedmemory.Dockerfile .
-# build docker run commands. replace `{YOUR_WANDB_KEY}` with your own
-WANDB_KEY={YOUR_WANDB_KEY} python docker.py > docker.sh
-# run experiments (96 in total)
-# if you have limited computational resources, consider not running all of them at a time.
-# in addition, notice the commands have --cpuset-cpus="0", --cpuset-cpus="1" for different runs
-# to make sure each container is only using one core. By default I assume your machine has 40 cores,
-# but feel free to modify the `cores` variable in `docker.py`
-bash docker.sh
+rm ~/microrts -fR && mkdir ~/microrts && \
+    wget -O ~/microrts/microrts.zip http://microrts.s3.amazonaws.com/microrts/artifacts/202004222224.microrts.zip && \
+    unzip ~/microrts/microrts.zip -d ~/microrts/ && \
+    rm ~/microrts/microrts.zip
 ```
 
-# Steps to reproduce the figures
-
-Record your wandb username, which we will refer to as `YOUR_WANDB_ENTITY`
-
-```bash
-cd plots
-WANDB_ENTITY={YOUR_WANDB_ENTITY} python episode_reward.py
-WANDB_ENTITY={YOUR_WANDB_ENTITY} python approx_kl.py
+## 10x10 Experiments
+```
+python invalid_action_masking/ppo_10x10.py
+python invalid_action_masking/ppo_no_adj_10x10.py
+python invalid_action_masking/ppo_no_mask_10x10.py
 ```
 
-These command should reproduce the PDFs in plots that are attached to the repo.
 
 # Reproduction without WANDB
 
@@ -42,3 +36,4 @@ without WANDB. Note that it is possible to use wandb locally by following https:
 We have tested these scripts to reproduce but it is possible that there is a bug and maybe
 we are assuming something specific regarding the environment. If you couldn't reproduce our results,
 please file an issue and we will address it as soon as the double-blind review is over.
+

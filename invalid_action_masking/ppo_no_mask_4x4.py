@@ -11,7 +11,6 @@ import numpy as np
 import gym
 import gym_microrts
 from gym.wrappers import TimeLimit, Monitor
-import pybullet_envs
 from gym.spaces import Discrete, Box, MultiBinary, MultiDiscrete, Space
 import time
 import random
@@ -234,7 +233,7 @@ class Policy(nn.Module):
     def forward(self, x):
         x = torch.Tensor(np.moveaxis(x, -1, 1)).to(device)
         x = self.features(x)
-        x = x.view(x.size(0), -1)
+        x = x.reshape(x.size(0), -1)
         x = self.fc(x)
         return x
 
@@ -266,7 +265,7 @@ class Value(nn.Module):
     def forward(self, x):
         x = torch.Tensor(np.moveaxis(x, -1, 1)).to(device)
         x = self.features(x)
-        x = x.view(x.size(0), -1)
+        x = x.reshape(x.size(0), -1)
         x = self.fc(x)
         return x
 
