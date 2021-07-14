@@ -3,19 +3,21 @@
 This repo contains the source code to reproduce the results in the paper *A Closer Look at Invalid Action Masking in Policy Gradient Algorithms*. 
 
 ## Get started
-```
-# if you have pyenv or poetry:
+
+If you have pyenv or poetry:
+```bash
 pyenv install -s $(sed "s/\/envs.*//" .python-version)
 pyenv virtualenv $(sed "s/\/envs\// /" .python-version)
+pyenv activate $(cat .python-version)
 poetry install
-# else:
-# pip install -r requirements.txt
 
 rm ~/microrts -fR && mkdir ~/microrts && \
     wget -O ~/microrts/microrts.zip http://microrts.s3.amazonaws.com/microrts/artifacts/202004222224.microrts.zip && \
     unzip ~/microrts/microrts.zip -d ~/microrts/ && \
     rm ~/microrts/microrts.zip
 ```
+
+Else, you can also install dependencies via `pip install -r requirements.txt`.
 
 ## 10x10 Experiments
 ```
