@@ -24,6 +24,7 @@ Else, you can also install dependencies via `pip install -r requirements.txt`.
 python invalid_action_masking/ppo_10x10.py
 python invalid_action_masking/ppo_no_adj_10x10.py
 python invalid_action_masking/ppo_no_mask_10x10.py
+python ppo.py # newer & recommended PPO implementation that matches implementation details in `openai/baselines`
 ```
 
 # If you have an issue reproducing the results
