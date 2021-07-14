@@ -1,6 +1,6 @@
 # A Closer Look at Invalid Action Masking in Policy Gradient Algorithms
 
-This repo contains the source code to reproduce the results in the paper *A Closer Look at Invalid Action Masking in Policy Gradient Algorithms*. 
+This repo contains the source code to reproduce the results in the paper [*A Closer Look at Invalid Action Masking in Policy Gradient Algorithms*](https://arxiv.org/abs/2006.14171). 
 
 ## Get started
 ```
