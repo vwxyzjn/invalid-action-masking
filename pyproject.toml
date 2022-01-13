@@ -7,7 +7,7 @@ authors = ["Costa Huang <costa.huang@outlook.com>"]
 [tool.poetry.dependencies]
 python = "^3.9"
 torch = "1.7.1"
-Pillow = "^8.3.1"
+Pillow = "^9.0.0"
 cleanrl = {git = "https://github.com/vwxyzjn/cleanrl.git", rev = "V0.1"}
 gym-microrts = {git = "https://github.com/vwxyzjn/gym-microrts.git", rev = "b0cabbabc363177709b3132201d57d024b5212e9"}
 tensorboard = "^2.5.0"
