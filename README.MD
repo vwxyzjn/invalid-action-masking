@@ -23,3 +23,17 @@ poetry run python invalid_action_masking/ppo_no_adj_10x10.py
 poetry run python invalid_action_masking/ppo_no_mask_10x10.py
 poetry run python ppo.py # newer & recommended PPO implementation that matches implementation details in `openai/baselines`
 ```
+
+## Citation
+
+```bibtex
+@inproceedings{huang2020closer,
+    title={A Closer Look at Invalid Action Masking in Policy Gradient Algorithms},
+    volume={35},url={https://journals.flvc.org/FLAIRS/article/view/130584},
+    DOI={10.32473/flairs.v35i.130584},
+    journal={The International FLAIRS Conference Proceedings},
+    author={Huang, Shengyi and Ontañón, Santiago},
+    year={2022},
+    month={May}
+}
+```
