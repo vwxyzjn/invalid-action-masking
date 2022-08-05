@@ -28,12 +28,20 @@ poetry run python ppo.py # newer & recommended PPO implementation that matches i
 
 ```bibtex
 @inproceedings{huang2020closer,
-    title={A Closer Look at Invalid Action Masking in Policy Gradient Algorithms},
-    volume={35},url={https://journals.flvc.org/FLAIRS/article/view/130584},
-    DOI={10.32473/flairs.v35i.130584},
-    journal={The International FLAIRS Conference Proceedings},
-    author={Huang, Shengyi and Ontañón, Santiago},
-    year={2022},
-    month={May}
+  author    = {Shengyi Huang and
+               Santiago Onta{\~{n}}{\'{o}}n},
+  editor    = {Roman Bart{\'{a}}k and
+               Fazel Keshtkar and
+               Michael Franklin},
+  title     = {A Closer Look at Invalid Action Masking in Policy Gradient Algorithms},
+  booktitle = {Proceedings of the Thirty-Fifth International Florida Artificial Intelligence
+               Research Society Conference, {FLAIRS} 2022, Hutchinson Island, Jensen
+               Beach, Florida, USA, May 15-18, 2022},
+  year      = {2022},
+  url       = {https://doi.org/10.32473/flairs.v35i.130584},
+  doi       = {10.32473/flairs.v35i.130584},
+  timestamp = {Thu, 09 Jun 2022 16:44:11 +0200},
+  biburl    = {https://dblp.org/rec/conf/flairs/HuangO22.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
 }
 ```
