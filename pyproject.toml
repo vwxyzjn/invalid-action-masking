@@ -5,7 +5,7 @@ description = ""
 authors = ["Costa Huang <costa.huang@outlook.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.8"
 torch = "1.7.1"
 Pillow = "^8.3.1"
 cleanrl = {git = "https://github.com/vwxyzjn/cleanrl.git", rev = "V0.1"}
@@ -16,6 +16,7 @@ stable-baselines3 = "^1.1.0"
 wandb = "^0.12.2"
 seaborn = "^0.11.2"
 spyder = "^5.1.5"
+setuptools = "59.5.0"
 
 [tool.poetry.dev-dependencies]
 
